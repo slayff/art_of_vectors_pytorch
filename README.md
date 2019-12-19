@@ -15,3 +15,5 @@ Usage:
 python3 exp_pert_samples.py --path [path to directory with images] --labels [path to labels.json file]
 ```
 Script will create `exps_results` folder where you can find all the results in corresponding subfolders (named by the model and layer name) - perturbated images, visualization of generated perturbation, model predictions.
+
+* `exp_generalization.py` is the code to reproduce experiment with generalization of perturbations across neworks. Usage follows the previous experiment explanation. Script will create `exps_results/generalization_exp` folder with `results.json`, containing information about fooling rates. The first level keys indicate the model used in evaluation step, the second level keys indicate the model FOR which the perturbation was constructed. Thus value of `result[a][b]` is the fooling rate of model `a` when perturbation was constructed for model `b`.
