@@ -20,7 +20,7 @@ class AdversarialAttack:
         self.input_shape = input_shape
         self.input_dim = torch.prod(torch.tensor(input_shape)).item()
         self.hidden_dim = torch.prod(torch.tensor(output_shape)).item()
-        self.power_method = PowerMethod(p, q, maxiter=pm_maxiter, device=device)
+        self.power_method = PowerMethod(p, q, maxiter=pm_maxiter, device=device, verbose=verbose)
         self.device = device
         self.verbose = verbose
 
@@ -31,9 +31,9 @@ class AdversarialAttack:
         for i, img_data in enumerate(img_iter):
             if i >= n_batches:
                 break
-
-            if self.verbose > 0:
-                print('Batch', i)
+               
+            if self.verbose:
+                print(f'Running power method on batch #{i}')
 
             img_batch = img_data['image'].to(self.device)
             jac = JacobianOperator(img_batch, self.mfe, self.input_dim, self.hidden_dim, self.device)
