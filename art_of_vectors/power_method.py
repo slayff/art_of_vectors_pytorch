@@ -54,7 +54,8 @@ class PowerMethod:
     def _power_method(self, jac):
         v = self.eigen_vec
         if self.eigen_vec is None:
-            v = torch.randn(jac.input_dim).to(self.device)
+            v = torch.zeros(jac.input_dim).to(self.device)
+            nn.init.normal_(v, std=0.2)
             v = v / torch.norm(v, p=self.p)
 
         p2 = 1.0 / (1.0 - 1.0 / self.p)

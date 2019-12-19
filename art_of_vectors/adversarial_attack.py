@@ -1,4 +1,5 @@
 import torch
+from tqdm import tqdm
 
 from .power_method import PowerMethod, JacobianOperator
 
@@ -41,20 +42,24 @@ class AdversarialAttack:
     @staticmethod
     def fooling_rate(model_raw_pred, model_pert_pred):
         return (model_raw_pred != model_pert_pred).float().mean().item()
+    
+    @staticmethod
+    def predict_raw(mfe, img_iter, device=torch.device('cpu'), verbose=0):
+        mfe.to(device)
+        mfe.eval()
 
-    def predict_raw(self, img_iter):
-        self.mfe.to(self.device)
-        self.mfe.eval()
-
-        outs = []
-        for i, img_data in enumerate(img_iter):
-            if self.verbose > 0:
-                print('Batch', i)
-
-            img_batch = img_data['image'].to(self.device)
-            outs.append(torch.argmax(self.mfe(img_batch), dim=-1))
-
-        return torch.cat(outs, dim=0)
+        probs = []
+        preds = []
+        for i, img_data in enumerate(tqdm(img_iter, disable=not verbose)):
+            
+            img_batch = img_data['image'].to(device)
+            probabilities = torch.softmax(mfe(img_batch), dim=-1)
+            cur_probs, cur_preds = torch.max(probabilities, dim=-1)
+            
+            probs.append(cur_probs)
+            preds.append(cur_preds)
+        
+        return dict(predictions=torch.cat(preds, dim=0), probabilities=torch.cat(probs, dim=0))
 
     def get_perturbation(self, adv_norm=10):
         return self.power_method.get_perturbation(self.input_shape, adv_norm=adv_norm)
