@@ -12,9 +12,8 @@ from matplotlib import pyplot as plt
 
 from art_of_vectors import AdversarialAttack, ModelFeatureExtracter
 from art_of_vectors.dataset_utils import (fix_seed, get_idx2label_map,
-                                            get_images_dataloader,
-                                            get_images_transforms)
-
+                                          get_images_dataloader,
+                                          get_images_transforms)
 
 DATA_PATH = './data'
 LABELS_PATH = './labels.json'
@@ -27,14 +26,14 @@ def run_experiment(adv_attack, mfe, batch_size=64, seed=0, info_msg=''):
 
     fix_seed(seed)
 
-    train_dataloader = get_images_dataloader('./data', batch_size, transforms=get_images_transforms())
+    train_dataloader = get_images_dataloader(DATA_PATH, batch_size, transforms=get_images_transforms())
     print('Starting power method...')
     adv_attack.fit(mfe, train_dataloader)
     print('Done power method!')
 
     generated_pert = adv_attack.get_perturbation().cpu()
     
-    pert_imgs_dataloader = get_images_dataloader('./data', 128, transforms=get_images_transforms(generated_pert))
+    pert_imgs_dataloader = get_images_dataloader(DATA_PATH, 128, transforms=get_images_transforms(generated_pert))
 
     print('Starting predicting classes of perturbated images...')
     pert_ans = adv_attack.predict_raw(mfe, pert_imgs_dataloader)
@@ -50,12 +49,12 @@ def run_experiment(adv_attack, mfe, batch_size=64, seed=0, info_msg=''):
 
 def make_random_samples_set(size=16):
     fix_seed(1324)
-    dataset_files = os.listdir('./data')[64:]
+    dataset_files = os.listdir(DATA_PATH)[64:]
     random_filenames = np.random.choice(dataset_files, size=size, replace=False)
     os.makedirs('./random_samples', exist_ok=True)
     
     for fn in random_filenames:
-        subprocess.check_call(['cp', os.path.join('data', fn), './random_samples'])
+        subprocess.check_call(['cp', os.path.join(DATA_PATH, fn), './random_samples'])
 
 
 def get_model_predictions_on_samples(mfe):
@@ -113,7 +112,7 @@ def evaluate_perturbation_on_samples(mfe, perturbation, directory):
 
 
 def create_adversarial_attack(mfe, q=10, device=torch.device('cpu'), verbose=1):
-    train_dataloader = get_images_dataloader('./data/', 1, transforms=get_images_transforms())
+    train_dataloader = get_images_dataloader(DATA_PATH, 1, transforms=get_images_transforms())
 
     input_img = next(iter(train_dataloader))['image'].to(device)
     input_shape = input_img.shape[1:]
@@ -128,7 +127,7 @@ def run_all_experiments_with_model(model, layers, model_name):
 
     init_mfe = ModelFeatureExtracter(model, list(layers.values())[0]).to(device)
 
-    raw_imgs_dataloader = get_images_dataloader('./data/', 128, transforms=get_images_transforms())
+    raw_imgs_dataloader = get_images_dataloader(DATA_PATH, 128, transforms=get_images_transforms())
 
     model_initial_predictions = create_adversarial_attack(init_mfe, device=device).predict_raw(init_mfe, raw_imgs_dataloader)
 
