@@ -26,14 +26,14 @@ class JacobianOperator:
     def matvec(self, vec):
         output = []
         for img in self.img_batch:
-            output.append(self._matvec_grad(img.unsqueeze(0), vec))
+            output.append(self._matvec_grad(img.unsqueeze(0), vec).detach())
         return torch.cat(output)
 
     def matvec_T(self, vec):
         output = torch.zeros(self.input_dim).to(self.device)
         vec_flatten = vec.reshape(-1, self.hidden_dim)
         for img, vec in zip(self.img_batch, vec_flatten):
-            output += self._matvec_T_grad(img.unsqueeze(0), vec).flatten()
+            output += self._matvec_T_grad(img.unsqueeze(0), vec).detach().flatten()
         return output
 
 
@@ -71,7 +71,7 @@ class PowerMethod:
                 print(f'iteration {i} of PowerMethod, eigen value {s}')
 
         s = torch.norm(jac.matvec(v), p=self.q)
-        return v.detach(), s.detach()
+        return v.detach(), s.item()
 
     def fit(self, jac):
         self.eigen_vec, self.eigen_val = self._power_method(jac)
