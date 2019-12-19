@@ -1,0 +1,82 @@
+{
+    "ILSVRC2012_val_00030879.JPEG": {
+        "prediction": "stole",
+        "class_id": 824,
+        "probability": 0.17884351313114166
+    },
+    "ILSVRC2012_val_00002868.JPEG": {
+        "prediction": "brass",
+        "class_id": 458,
+        "probability": 0.9965258240699768
+    },
+    "ILSVRC2012_val_00005880.JPEG": {
+        "prediction": "sock",
+        "class_id": 806,
+        "probability": 0.439189076423645
+    },
+    "ILSVRC2012_val_00024624.JPEG": {
+        "prediction": "cocker_spaniel",
+        "class_id": 219,
+        "probability": 0.0961146280169487
+    },
+    "ILSVRC2012_val_00002441.JPEG": {
+        "prediction": "hair_slide",
+        "class_id": 584,
+        "probability": 0.46824750304222107
+    },
+    "ILSVRC2012_val_00035154.JPEG": {
+        "prediction": "stole",
+        "class_id": 824,
+        "probability": 0.20474106073379517
+    },
+    "ILSVRC2012_val_00000092.JPEG": {
+        "prediction": "Madagascar_cat",
+        "class_id": 383,
+        "probability": 0.9791519045829773
+    },
+    "ILSVRC2012_val_00042213.JPEG": {
+        "prediction": "teddy",
+        "class_id": 850,
+        "probability": 0.2536974549293518
+    },
+    "ILSVRC2012_val_00007521.JPEG": {
+        "prediction": "comic_book",
+        "class_id": 917,
+        "probability": 0.502240777015686
+    },
+    "ILSVRC2012_val_00033391.JPEG": {
+        "prediction": "brain_coral",
+        "class_id": 109,
+        "probability": 0.17922690510749817
+    },
+    "ILSVRC2012_val_00043537.JPEG": {
+        "prediction": "stole",
+        "class_id": 824,
+        "probability": 0.5889223217964172
+    },
+    "ILSVRC2012_val_00043248.JPEG": {
+        "prediction": "sock",
+        "class_id": 806,
+        "probability": 0.7992712259292603
+    },
+    "ILSVRC2012_val_00035178.JPEG": {
+        "prediction": "velvet",
+        "class_id": 885,
+        "probability": 0.08490448445081711
+    },
+    "ILSVRC2012_val_00030580.JPEG": {
+        "prediction": "shopping_basket",
+        "class_id": 790,
+        "probability": 0.1392035335302353
+    },
+    "ILSVRC2012_val_00023884.JPEG": {
+        "prediction": "paper_towel",
+        "class_id": 700,
+        "probability": 0.2249462604522705
+    },
+    "ILSVRC2012_val_00022793.JPEG": {
+        "prediction": "carton",
+        "class_id": 478,
+        "probability": 0.3039541244506836
+    }
+}

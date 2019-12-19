@@ -1,0 +1,82 @@
+{
+    "ILSVRC2012_val_00030879.JPEG": {
+        "prediction": "chainlink_fence",
+        "class_id": 489,
+        "probability": 0.17136497795581818
+    },
+    "ILSVRC2012_val_00002868.JPEG": {
+        "prediction": "space_heater",
+        "class_id": 811,
+        "probability": 0.21200303733348846
+    },
+    "ILSVRC2012_val_00005880.JPEG": {
+        "prediction": "sock",
+        "class_id": 806,
+        "probability": 0.06147105619311333
+    },
+    "ILSVRC2012_val_00024624.JPEG": {
+        "prediction": "mosquito_net",
+        "class_id": 669,
+        "probability": 0.0972241684794426
+    },
+    "ILSVRC2012_val_00002441.JPEG": {
+        "prediction": "running_shoe",
+        "class_id": 770,
+        "probability": 0.22658614814281464
+    },
+    "ILSVRC2012_val_00035154.JPEG": {
+        "prediction": "mosquito_net",
+        "class_id": 669,
+        "probability": 0.19879193603992462
+    },
+    "ILSVRC2012_val_00000092.JPEG": {
+        "prediction": "Madagascar_cat",
+        "class_id": 383,
+        "probability": 0.9300917387008667
+    },
+    "ILSVRC2012_val_00042213.JPEG": {
+        "prediction": "Pomeranian",
+        "class_id": 259,
+        "probability": 0.8917616009712219
+    },
+    "ILSVRC2012_val_00007521.JPEG": {
+        "prediction": "basketball",
+        "class_id": 430,
+        "probability": 0.07754998654127121
+    },
+    "ILSVRC2012_val_00033391.JPEG": {
+        "prediction": "ringneck_snake",
+        "class_id": 53,
+        "probability": 0.14520388841629028
+    },
+    "ILSVRC2012_val_00043537.JPEG": {
+        "prediction": "window_screen",
+        "class_id": 904,
+        "probability": 0.7897832989692688
+    },
+    "ILSVRC2012_val_00043248.JPEG": {
+        "prediction": "tench",
+        "class_id": 0,
+        "probability": 0.07294778525829315
+    },
+    "ILSVRC2012_val_00035178.JPEG": {
+        "prediction": "chainlink_fence",
+        "class_id": 489,
+        "probability": 0.08284880965948105
+    },
+    "ILSVRC2012_val_00030580.JPEG": {
+        "prediction": "puck",
+        "class_id": 746,
+        "probability": 0.092167429625988
+    },
+    "ILSVRC2012_val_00023884.JPEG": {
+        "prediction": "tick",
+        "class_id": 78,
+        "probability": 0.08729399740695953
+    },
+    "ILSVRC2012_val_00022793.JPEG": {
+        "prediction": "carton",
+        "class_id": 478,
+        "probability": 0.14406611025333405
+    }
+}
