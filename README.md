@@ -14,4 +14,4 @@ Usage:
 ```
 python3 exp_pert_samples.py --path [path to directory with images] --labels [path to labels.json file]
 ```
-Script will create `exps_results` folder where you can find all the results - perturbated images, visualization of generated perturbation, model predictions.
+Script will create `exps_results` folder where you can find all the results in corresponding subfolders (named by the model and layer name) - perturbated images, visualization of generated perturbation, model predictions.
