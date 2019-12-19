@@ -73,3 +73,8 @@ def get_idx2label_map(labels_json_path):
     for k, v in j.items():
         idx2label[int(k)] = v[1]
     return idx2label
+
+
+def normalize_image(img):
+    img = (img - img.min()) / (img - img.max())
+    return img.permute(1, 2, 0)
