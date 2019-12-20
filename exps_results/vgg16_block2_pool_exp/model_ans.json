@@ -1,0 +1,82 @@
+{
+    "ILSVRC2012_val_00030879.JPEG": {
+        "prediction": "mountain_bike",
+        "class_id": 671,
+        "probability": 0.2292686253786087
+    },
+    "ILSVRC2012_val_00002868.JPEG": {
+        "prediction": "brass",
+        "class_id": 458,
+        "probability": 0.9945354461669922
+    },
+    "ILSVRC2012_val_00005880.JPEG": {
+        "prediction": "boa_constrictor",
+        "class_id": 61,
+        "probability": 0.46956443786621094
+    },
+    "ILSVRC2012_val_00024624.JPEG": {
+        "prediction": "Blenheim_spaniel",
+        "class_id": 156,
+        "probability": 0.2873517572879791
+    },
+    "ILSVRC2012_val_00002441.JPEG": {
+        "prediction": "running_shoe",
+        "class_id": 770,
+        "probability": 0.4858490824699402
+    },
+    "ILSVRC2012_val_00035154.JPEG": {
+        "prediction": "Madagascar_cat",
+        "class_id": 383,
+        "probability": 0.06117668002843857
+    },
+    "ILSVRC2012_val_00000092.JPEG": {
+        "prediction": "indri",
+        "class_id": 384,
+        "probability": 0.5166290998458862
+    },
+    "ILSVRC2012_val_00042213.JPEG": {
+        "prediction": "Pomeranian",
+        "class_id": 259,
+        "probability": 0.844142496585846
+    },
+    "ILSVRC2012_val_00007521.JPEG": {
+        "prediction": "book_jacket",
+        "class_id": 921,
+        "probability": 0.5102355480194092
+    },
+    "ILSVRC2012_val_00033391.JPEG": {
+        "prediction": "bonnet",
+        "class_id": 452,
+        "probability": 0.2814304232597351
+    },
+    "ILSVRC2012_val_00043537.JPEG": {
+        "prediction": "Komodo_dragon",
+        "class_id": 48,
+        "probability": 0.2106369435787201
+    },
+    "ILSVRC2012_val_00043248.JPEG": {
+        "prediction": "teddy",
+        "class_id": 850,
+        "probability": 0.2759484648704529
+    },
+    "ILSVRC2012_val_00035178.JPEG": {
+        "prediction": "crayfish",
+        "class_id": 124,
+        "probability": 0.5425457954406738
+    },
+    "ILSVRC2012_val_00030580.JPEG": {
+        "prediction": "shield",
+        "class_id": 787,
+        "probability": 0.1066986620426178
+    },
+    "ILSVRC2012_val_00023884.JPEG": {
+        "prediction": "paper_towel",
+        "class_id": 700,
+        "probability": 0.1870330274105072
+    },
+    "ILSVRC2012_val_00022793.JPEG": {
+        "prediction": "toilet_tissue",
+        "class_id": 999,
+        "probability": 0.3764849603176117
+    }
+}

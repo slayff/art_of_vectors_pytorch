@@ -1,0 +1,82 @@
+{
+    "ILSVRC2012_val_00030879.JPEG": {
+        "prediction": "mountain_bike",
+        "class_id": 671,
+        "probability": 0.46896418929100037
+    },
+    "ILSVRC2012_val_00002868.JPEG": {
+        "prediction": "brass",
+        "class_id": 458,
+        "probability": 0.9158086776733398
+    },
+    "ILSVRC2012_val_00005880.JPEG": {
+        "prediction": "boa_constrictor",
+        "class_id": 61,
+        "probability": 0.12964004278182983
+    },
+    "ILSVRC2012_val_00024624.JPEG": {
+        "prediction": "Chihuahua",
+        "class_id": 151,
+        "probability": 0.3921031951904297
+    },
+    "ILSVRC2012_val_00002441.JPEG": {
+        "prediction": "bakery",
+        "class_id": 415,
+        "probability": 0.08878428488969803
+    },
+    "ILSVRC2012_val_00035154.JPEG": {
+        "prediction": "Arctic_fox",
+        "class_id": 279,
+        "probability": 0.32097411155700684
+    },
+    "ILSVRC2012_val_00000092.JPEG": {
+        "prediction": "indri",
+        "class_id": 384,
+        "probability": 0.5014187097549438
+    },
+    "ILSVRC2012_val_00042213.JPEG": {
+        "prediction": "Pomeranian",
+        "class_id": 259,
+        "probability": 0.9893448948860168
+    },
+    "ILSVRC2012_val_00007521.JPEG": {
+        "prediction": "book_jacket",
+        "class_id": 921,
+        "probability": 0.7651742100715637
+    },
+    "ILSVRC2012_val_00033391.JPEG": {
+        "prediction": "centipede",
+        "class_id": 79,
+        "probability": 0.5759252309799194
+    },
+    "ILSVRC2012_val_00043537.JPEG": {
+        "prediction": "cougar",
+        "class_id": 286,
+        "probability": 0.1702108532190323
+    },
+    "ILSVRC2012_val_00043248.JPEG": {
+        "prediction": "bagel",
+        "class_id": 931,
+        "probability": 0.9097245931625366
+    },
+    "ILSVRC2012_val_00035178.JPEG": {
+        "prediction": "American_lobster",
+        "class_id": 122,
+        "probability": 0.9882665276527405
+    },
+    "ILSVRC2012_val_00030580.JPEG": {
+        "prediction": "slot",
+        "class_id": 800,
+        "probability": 0.2600341737270355
+    },
+    "ILSVRC2012_val_00023884.JPEG": {
+        "prediction": "Samoyed",
+        "class_id": 258,
+        "probability": 0.968224823474884
+    },
+    "ILSVRC2012_val_00022793.JPEG": {
+        "prediction": "carton",
+        "class_id": 478,
+        "probability": 0.9463753700256348
+    }
+}
