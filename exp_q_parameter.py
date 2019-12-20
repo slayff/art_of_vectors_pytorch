@@ -29,7 +29,7 @@ EXP_PATH = 'exps_results/q_parameter_exp'
 BATCH_SIZE = 64
 LAYER_FOR_EXTRACTION_NUM = 9  # block2_pool
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-Q_GRID = np.linspace(1, 5, num=20)
+Q_GRID = list(np.linspace(1, 5, 20)) + list(np.linspace(6, 10, num=9))
 
 
 def make_exp():
@@ -87,7 +87,7 @@ def make_exp():
 
     fig, ax = plt.subplots(1, 5, figsize=(13, 13))
     fig.tight_layout()
-    for i, idx in enumerate(range(0, len(Q_GRID), 4)):
+    for i, idx in enumerate(range(0, len(Q_GRID), 7)):
         ax[i].imshow(normalize_image(perturbations[idx]))
         ax[i].set_axis_off()
         ax[i].set_title(f'q={Q_GRID[idx]:.2f}')
